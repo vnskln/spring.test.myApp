@@ -1,0 +1,54 @@
+body{
+    background: #f2f2f2 !important;
+    min-height: 100vh;
+}
+
+.navbar{
+    background-color: rgba(35,50,55,0.8);
+}
+
+#nav-logo{
+    width:  60px;
+    border: 1px solid #555;
+}
+
+.nav-link{
+    font-size: 13px;
+    text-transform: uppercase;
+    padding-left: 1em !important;
+    padding-right: 1em !important;
+}
+
+.carousel-item{
+    height:400px;
+}
+
+.carousel-caption {
+    top: 60px;
+    bottom: auto;
+}
+
+.carousel-image-1{
+    background: url(../img/carouselNo01.jpg);
+    background-size: cover;
+}
+
+.carousel-image-2{
+    background: url(../img/carouselNo02.jpg);
+    background-size: cover;
+}
+
+.carousel-image-3{
+    background: url(../img/carouselNo03.jpeg);
+    background-size: cover;
+}
+
+footer{
+    background: rgba(35,50,55);
+    color:#fff;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+

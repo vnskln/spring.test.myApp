@@ -13,6 +13,8 @@
 
 	<context:component-scan base-package="spring.test.myApp" />
 
+	<mvc:resources mapping="/resources/**" location="/resources/"></mvc:resources>
+
 	<mvc:annotation-driven/>
 
 	<bean
