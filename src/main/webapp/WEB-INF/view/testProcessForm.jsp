@@ -26,7 +26,7 @@
                             <a href="index" class="nav-link">Main</a>
                         </li>
                         <li class="nav-item active">
-                            <a href="testForm" class="nav-link">Form test</a>
+                            <a href="show" class="nav-link">Form test</a>
                         </li>
                      </ul>
                 </div>
@@ -45,13 +45,15 @@
         </header>
 		<section>
             <div class="container">
-				<div class="row">
-					<div class="col"></div>
-					<div class="col text-center">
-						<h3>Your text:</h3> 
-						<p class="text-danger">${upgradedSampleText}</p>
+				<div class="row justify-content-center">
+					<div class="col-3 text-left">
+	                	<p>name: ${person.name}</p>
+	                	<p>surname: ${person.surname}</p>
+	                	<p>age: ${person.age}</p>
+	                	<p>height: ${person.height}</p>
+	                	<p>education: ${person.education}</p>
+	                	<p>is this person a robot: ${person.robotChecker}</p>
 					</div>
-					<div class="col"></div>
 				</div>
 			</div>
         </section>

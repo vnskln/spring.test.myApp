@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="<%=request.getContextPath() %>/resources/css/style.css">
         <link rel="stylesheet" href="<%=request.getContextPath() %>/resources/css/bootstrap.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-sm navbar-dark text-white fixed-top">
@@ -26,7 +26,7 @@
                             <a href="index" class="nav-link">Main</a>
                         </li>
                         <li class="nav-item active">
-                            <a href="testForm" class="nav-link">Form test</a>
+                            <a href="" class="nav-link">Form test</a>
                         </li>
                      </ul>
                 </div>
@@ -37,7 +37,7 @@
                 <div class="container">
                     <div class="row ">
                         <div class="col pt-5">
-                            <h1 class="display-4 text-center">Simple form test</h1>
+                            <h1 class="display-4 text-center">Form test</h1>
                         </div>
                     </div>
                 </div>
@@ -46,14 +46,28 @@
 		<section>
             <div class="container">
 				<div class="row">
-					<div class="col"></div>
-					<div class="col text-center">
-						<form:form action="processTestForm" method="get" class="justify-center">
-	                	<input type="text" name="sampleText" placeholder="testing your form..." />
-	                    <input type="submit" value="Test" class="add-button" />
+					<div class="col-5 text-right">
+	                	<p class="pb-2">Name:</p>
+	                	<p class="pb-1">Surname:</p>
+	                	<p class="pb-2">Age:</p>
+	                	<p class="pb-1">Height [m]:</p>
+	                	<p class="pb-1">Education:</p>
+	                	<p>Are you a robot?</p>
+					</div>
+					<div class="col">
+						<form:form action="process" modelAttribute="person">
+	                		<p><form:input path="name" placeholder="your name.."/></p>
+	                		<p><form:input path="surname" placeholder="your surname.."/></p>
+	                		<p><form:input path="age" placeholder="0"/></p>
+	                		<p><form:input path="height"/></p>
+	                		<p><form:select path="education">
+	                			<form:options items="${person.educationOptions}" />               		
+	                		</form:select></p>
+	                		yes <form:radiobutton path="robotChecker" value="true"/>
+	                		no <form:radiobutton path="robotChecker" value="false"/>
+	                        <p><br><input type="submit" value="process form" class="add-button" /></p>
 	            		</form:form>	
 					</div>
-					<div class="col"></div>
 				</div>
 			</div>
         </section>
