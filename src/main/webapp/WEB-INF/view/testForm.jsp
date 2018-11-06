@@ -38,6 +38,7 @@
                     <div class="row ">
                         <div class="col pt-5">
                             <h1 class="display-4 text-center">Form test</h1>
+                            <p class="text-center">using Hibernate Validator</p>
                         </div>
                     </div>
                 </div>
@@ -56,10 +57,14 @@
 					</div>
 					<div class="col">
 						<form:form action="process" modelAttribute="person">
-	                		<p><form:input path="name" placeholder="your name.."/></p>
-	                		<p><form:input path="surname" placeholder="your surname.."/></p>
-	                		<p><form:input path="age" placeholder="0"/></p>
-	                		<p><form:input path="height"/></p>
+	                		<p><form:input path="name" placeholder="your name.."/>
+	                		<form:errors path="name" cssClass="error"/></p>
+	                		<p><form:input path="surname" placeholder="your surname.."/>
+	                		<form:errors path="surname" cssClass="error"/></p>
+	                		<p><form:input path="age" placeholder="0"/>
+	                		<form:errors path="age" cssClass="error"/></p>
+	                		<p><form:input path="height"/>
+	                		<form:errors path="height" cssClass="error"/></p>
 	                		<p><form:select path="education">
 	                			<form:options items="${person.educationOptions}" />               		
 	                		</form:select></p>

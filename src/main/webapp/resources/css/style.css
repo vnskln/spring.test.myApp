@@ -51,4 +51,12 @@ footer{
     width: 100%;
 }
 
+.error{
+	color:red;
+	font-size: 10px;
+}
+
+#success{
+    width:  250px;
+}
 

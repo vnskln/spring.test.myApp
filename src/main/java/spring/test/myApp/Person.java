@@ -2,13 +2,37 @@ package spring.test.myApp;
 
 import java.util.LinkedList;
 
+import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import spring.test.myApp.validationRules.NameChecker;
+
 public class Person {
+	@NotNull(message="required")
+	@Size(min=1, message="required")
+	@NameChecker()
 	private String name;
+	
+	@NotNull(message="required")
+	@Size(min=1, message="required")
 	private String surname;
-	private int age;
-	private double height;
+	
+	@NotNull(message="required")
+	@Min(value=1, message="minimum value equals 1")
+	@Max(value=130, message="maximum value equals 130")
+	private Integer age;
+	
+	@NotNull(message="required")
+	@DecimalMin(value="0.1", message="minimum value equals 0.1")
+	private Double height;
+	
 	private String education;
+	
 	private LinkedList <String> educationOptions;
+	
 	private boolean robotChecker;
 	
 	public Person () {
@@ -35,19 +59,19 @@ public class Person {
 		this.surname = surname;
 	}
 
-	public int getAge() {
+	public Integer getAge() {
 		return age;
 	}
 
-	public void setAge(int age) {
+	public void setAge(Integer age) {
 		this.age = age;
 	}
 
-	public double getHeight() {
+	public Double getHeight() {
 		return height;
 	}
 
-	public void setHeight(double height) {
+	public void setHeight(Double height) {
 		this.height = height;
 	}
 

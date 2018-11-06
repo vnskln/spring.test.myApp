@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="<%=request.getContextPath() %>/resources/css/style.css">
         <link rel="stylesheet" href="<%=request.getContextPath() %>/resources/css/bootstrap.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-sm navbar-dark text-white fixed-top">
@@ -37,7 +37,7 @@
                 <div class="container">
                     <div class="row ">
                         <div class="col pt-5">
-                            <h1 class="display-4 text-center">Form processed</h1>
+                            <h1 class="display-4 text-center">Form test done</h1>
                         </div>
                     </div>
                 </div>
@@ -46,13 +46,24 @@
 		<section>
             <div class="container">
 				<div class="row justify-content-center">
-					<div class="col-3 text-left">
-	                	<p>name: ${person.name}</p>
-	                	<p>surname: ${person.surname}</p>
-	                	<p>age: ${person.age}</p>
-	                	<p>height: ${person.height}</p>
-	                	<p>education: ${person.education}</p>
-	                	<p>is this person a robot: ${person.robotChecker}</p>
+					<div class="card text-center">
+						<div class="card-body ">
+							<img src="<%=request.getContextPath() %>/resources/img/success.jpeg" id="success">
+							<h5 class="card-title pt-3">New personal data</h5>
+							<p class="card-text text-left">name: ${person.name}
+							<br>surname: ${person.surname}
+		                	<br>age: ${person.age}
+		                	<br>height: ${person.height}
+		                	<br>education: ${person.education}
+		                	<br> is this person a robot: 
+		                	<c:if test="${person.robotChecker==false}">
+		                	no
+							</c:if>
+							<c:if test="${person.robotChecker==true}">
+		                	yes
+							</c:if>
+		                	</p>
+						</div>
 					</div>
 				</div>
 			</div>
