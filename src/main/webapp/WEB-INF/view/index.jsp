@@ -110,7 +110,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <p>Copyright 2018 &copy;pb</p>
+                        <p>Copyright 2018 &copy;vnskln</p>
                     </div>
                 </div>
             </div>

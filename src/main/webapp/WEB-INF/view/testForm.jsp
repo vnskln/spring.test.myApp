@@ -37,8 +37,9 @@
                 <div class="container">
                     <div class="row ">
                         <div class="col pt-5">
-                            <h1 class="display-4 text-center">Form test</h1>
-                            <p class="text-center">using Hibernate Validator</p>
+                            <h1 class="display-4 text-center">Simple test form</h1>
+                            <p class="text-center">validation using Hibernate Validator
+                            <br>valid data is saved in database</p>
                         </div>
                     </div>
                 </div>

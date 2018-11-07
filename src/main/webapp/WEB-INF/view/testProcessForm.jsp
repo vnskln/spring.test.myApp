@@ -49,7 +49,7 @@
 					<div class="card text-center">
 						<div class="card-body ">
 							<img src="<%=request.getContextPath() %>/resources/img/success.jpeg" id="success">
-							<h5 class="card-title pt-3">New personal data</h5>
+							<h5 class="card-title pt-3">New personal data saved to database</h5>
 							<p class="card-text text-left">name: ${person.name}
 							<br>surname: ${person.surname}
 		                	<br>age: ${person.age}
