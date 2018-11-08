@@ -25,11 +25,11 @@
                         <li class="nav-item">
                             <a href="index" class="nav-link">Main</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="hibernateTestRoutine" class="nav-link">Database connection test</a>
-                        </li>
                         <li class="nav-item active">
-                            <a href="show" class="nav-link">Form test</a>
+                            <a href="" class="nav-link">Database connection test</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="form/show" class="nav-link">Form test</a>
                         </li>
                      </ul>
                 </div>
@@ -38,38 +38,23 @@
 		<header class="main-header py-1">
             <section id="tytul" class="pt-5 pb-3">
                 <div class="container">
-                    <div class="row ">
-                        <div class="col pt-5">
-                            <h1 class="display-4 text-center">Form test done</h1>
+                    <div class="row">
+                        <div class="col-6 pt-5 mx-auto">
+                            <h1 class="display-4">Database test success</h1>
+                            <p>Operations performed on "people" table in myApp database:</p>
+                            <ul style="list-style-type:square">
+								<li>save 5 new sample records</li>
+								<li>read record with id=3</li>
+								<li>read all records and print them</li>
+								<li>read and print records with "secondary" education</li>
+								<li>update records with robotChecker=true</li>
+								<li>read all records and print them again</li>
+							</ul>
+							<p>Results can be seen in ide console.</p>
                         </div>
                     </div>
                 </div>
             </section>
         </header>
-		<section>
-            <div class="container">
-				<div class="row justify-content-center">
-					<div class="card text-center">
-						<div class="card-body ">
-							<img src="<%=request.getContextPath() %>/resources/img/success.jpeg" id="success">
-							<h5 class="card-title pt-3">New personal data saved to database</h5>
-							<p class="card-text text-left">name: ${person.name}
-							<br>surname: ${person.surname}
-		                	<br>age: ${person.age}
-		                	<br>height: ${person.height}
-		                	<br>education: ${person.education}
-		                	<br> is this person a robot: 
-		                	<c:if test="${person.robotChecker==false}">
-		                	no
-							</c:if>
-							<c:if test="${person.robotChecker==true}">
-		                	yes
-							</c:if>
-		                	</p>
-						</div>
-					</div>
-				</div>
-			</div>
-        </section>
 	</body>
 </html>

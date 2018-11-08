@@ -1,5 +1,7 @@
 package spring.test.myApp;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.hibernate.Session;
@@ -15,17 +17,17 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/form")
+@RequestMapping("form")
 public class FormTestController {
 	
-	@RequestMapping("/show")
+	@RequestMapping("show")
 	public String showTestForm (Model model) {
 		Person person = new Person();
 		model.addAttribute("person", person);
 		return "testForm";
 	}
 	
-	@RequestMapping("/process")
+	@RequestMapping("process")
 	public String processTestForm(@Valid @ModelAttribute("person") Person person, BindingResult theBindingResult) {
 		if (theBindingResult.hasErrors()) {
 			return "testForm";
@@ -37,7 +39,6 @@ public class FormTestController {
 				session.beginTransaction();
 				session.save(person);
 				session.getTransaction().commit();
-				System.out.println("person id: " + person.getId());
 			} finally {
 				factory.close();
 			}
@@ -49,7 +50,12 @@ public class FormTestController {
 	public String showStartPage() {
 		return "redirect:/index";
 	}
-		
+	
+	@RequestMapping("hibernateTestRoutine")
+	public String showHibernateTestRoutine() {
+		return "redirect:/hibernateTestRoutine";
+	}
+	
 	//no whitespace in requests
 	@InitBinder
 	public void initBinder (WebDataBinder webDataBinder) {

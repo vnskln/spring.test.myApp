@@ -25,6 +25,9 @@
                         <li class="nav-item">
                             <a href="index" class="nav-link">Main</a>
                         </li>
+                        <li class="nav-item">
+                            <a href="hibernateTestRoutine" class="nav-link">Database connection test</a>
+                        </li>
                         <li class="nav-item active">
                             <a href="" class="nav-link">Form test</a>
                         </li>
