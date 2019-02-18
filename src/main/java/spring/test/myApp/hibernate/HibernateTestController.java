@@ -52,7 +52,7 @@ public class HibernateTestController {
 			System.out.println("\n------Reading and printing records done\n");
 			session.getTransaction().commit();
 			
-			//Updating records
+			//updating records
 			session = factory.getCurrentSession();
 			session.beginTransaction();
 			System.out.println("\n------Updating records with robotChecker = true\n");

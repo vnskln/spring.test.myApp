@@ -15,7 +15,9 @@
         <link rel="stylesheet" href="<%=request.getContextPath() %>/resources/css/bootstrap.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
 	</head>
+	
 	<body>
+	
 		<nav class="navbar navbar-expand-sm navbar-dark text-white fixed-top">
             <div class="container">
                 <a href="index" class="navbar-brand">
@@ -34,10 +36,14 @@
                         <li class="nav-item">
                             <a href="form/show" class="nav-link">Form test</a>
                         </li>
+                        <li class="nav-item">
+                            <a href="employeeList" class="nav-link">Employee List</a>
+                        </li>
                      </ul>
                 </div>
             </div>
         </nav>
+        
         <div class="pt-5"></div>
         <header class="main-header pt-5" id="header-section">
         	<section id="showcase">             
@@ -50,7 +56,6 @@
                         <li data-target="#karuzela" data-slide-to="2">
                         </li>
                     </ol>
-                    
                     <div class="carousel-inner">
                         <div class="carousel-item carousel-image-1 active">
                             <div class="container">
@@ -118,6 +123,7 @@
                 </div>
             </div>
         </footer>
+        
         <script src="<%=request.getContextPath() %>/resources/js/jquery-3.3.1.min.js"></script>
         <script src="<%=request.getContextPath() %>/resources/js/bootstrap.min.js"></script>
     </body>	

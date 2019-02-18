@@ -31,6 +31,9 @@
                         <li class="nav-item active">
                             <a href="" class="nav-link">Form test</a>
                         </li>
+                        <li class="nav-item">
+                            <a href="employeeList" class="nav-link">Employee List</a>
+                        </li>
                      </ul>
                 </div>
             </div>

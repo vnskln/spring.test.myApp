@@ -51,12 +51,16 @@ public class FormTestController {
 		return "redirect:/index";
 	}
 	
+	@RequestMapping("employeeList")
+	public String goBackToEmployeeList () {
+		return "redirect:/employeeList";
+	}
+	
 	@RequestMapping("hibernateTestRoutine")
 	public String showHibernateTestRoutine() {
 		return "redirect:/hibernateTestRoutine";
 	}
 	
-	//no whitespace in requests
 	@InitBinder
 	public void initBinder (WebDataBinder webDataBinder) {
 		StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true);
