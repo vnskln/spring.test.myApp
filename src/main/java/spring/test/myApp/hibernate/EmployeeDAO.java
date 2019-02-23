@@ -16,15 +16,16 @@ public class EmployeeDAO {
 	@Autowired
 	public SessionFactory sessionFactory;
 	
-	@Transactional
 	public List<Employee> getEmployees (){
 		Session session = sessionFactory.getCurrentSession();
-		Query<Employee> query = session.createQuery("from Employee", Employee.class);
+		Query<Employee> query = session.createQuery("from Employee order by surname", Employee.class);
 		List <Employee> employees = query.getResultList();
-		for (int i=0;i<employees.size();i++) {
-			System.out.println(employees.get(i));
-		}
 		return employees;
+	}
+
+	public void saveEmployee(Employee theEmployee) {
+		Session session = sessionFactory.getCurrentSession();
+		session.save(theEmployee);
 	}
 
 }

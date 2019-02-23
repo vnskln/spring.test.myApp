@@ -26,7 +26,7 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a href="" class="nav-link">Main</a>
+                            <a href="index" class="nav-link">Main</a>
                         </li>
                         <li class="nav-item">
                             <a href="hibernateTestRoutine" class="nav-link">Database connection test</a>
@@ -35,7 +35,7 @@
                             <a href="form/show" class="nav-link">Form test</a>
                         </li>
                         <li class="nav-item active">
-                            <a href="employeeList" class="nav-link">Employee List</a>
+                            <a href="" class="nav-link">Employee List</a>
                         </li>
                      </ul>
                 </div>
@@ -58,7 +58,7 @@
 					<div class="col-8">
 						<form:form action="search" method="POST">
 	                	Search for employee: <input type="text" name="theSearchName" />
-	                    <input type="submit" value="Search" class="add-button" />
+	                    <input type="submit" value="Search" class="btn" />
 	            		</form:form>
 									
 					</div>
@@ -98,8 +98,8 @@
 								<td> ${tempEmployee.email}</td>
 								<td> ${tempEmployee.city}</td>
 								<td> ${tempEmployee.address}</td>
-								<td><a href=${updateLink}><i class="fas fa-address-card"></i></a>
-								<a href=${deleteLink} onclick="if (!(confirm('Czy chcesz usunąć tego pracownika?'))) return false"><i class="far fa-trash-alt"></i></a></td>
+								<td><a href=${updateLink} data-toggle="tooltip" title="Edit"><i class="fas fa-address-card"></i></a>
+								<a href=${deleteLink} data-toggle="tooltip" title="Delete" onclick="if (!(confirm('Czy chcesz usunąć tego pracownika?'))) return false"><i class="far fa-trash-alt"></i></a></td>
 							</tr>
 						</c:forEach>
 					</table>
