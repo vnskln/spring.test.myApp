@@ -25,4 +25,9 @@ public class EmployeeService {
 		employeeDAO.saveEmployee(theEmployee);		
 	}
 
+	@Transactional
+	public Employee getEmployee(int employeeId) {
+		return employeeDAO.getEmployee(employeeId);
+	}
+
 }

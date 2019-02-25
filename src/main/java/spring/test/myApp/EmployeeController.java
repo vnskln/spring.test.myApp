@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import spring.test.myApp.Person;
 import spring.test.myApp.hibernate.Employee;
@@ -39,5 +40,12 @@ public class EmployeeController {
 	public String saveEmployee (@ModelAttribute("employee") Employee theEmployee) {
 		employeeService.saveEmployee(theEmployee);
 		return "redirect:/employeeList";
+	}
+	
+	@GetMapping("showEmployeeUpdateForm")
+	public String showUpdateForm(@RequestParam("employeeId") int employeeId, Model model) {
+		Employee theEmployee = employeeService.getEmployee(employeeId);
+		model.addAttribute("employee",theEmployee);
+		return "employeeForm";
 	}
 }

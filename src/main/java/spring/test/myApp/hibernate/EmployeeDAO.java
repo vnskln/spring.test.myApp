@@ -25,7 +25,11 @@ public class EmployeeDAO {
 
 	public void saveEmployee(Employee theEmployee) {
 		Session session = sessionFactory.getCurrentSession();
-		session.save(theEmployee);
+		session.saveOrUpdate(theEmployee);
 	}
 
+	public Employee getEmployee(int employeeId) {
+		Session session = sessionFactory.getCurrentSession();
+		return session.get(Employee.class, employeeId);
+	}
 }

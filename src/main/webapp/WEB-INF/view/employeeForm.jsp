@@ -34,7 +34,7 @@
 							<label class="mt-3">Email</label>
 							<form:input path="email" class="form-control"/>
 							<label class="mt-3">Phone number</label>
-							<form:input type="number" path="phoneNumber" class="form-control"/>
+							<form:input path="phoneNumber" class="form-control"/>
 							<label class="mt-3">City</label>
 							<form:input path="city" class="form-control"/>
 							<label class="mt-3">Postal code</label>

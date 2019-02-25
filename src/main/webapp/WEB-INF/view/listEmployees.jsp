@@ -84,7 +84,7 @@
 							</tr>
 						</thead>
 						<c:forEach var="tempEmployee" items="${employees}">
-							<c:url var="updateLink" value="/employee/showUpdateForm">
+							<c:url var="updateLink" value="/showEmployeeUpdateForm">
 								<c:param name="employeeId" value="${tempEmployee.id}"/>
 							</c:url>
 							
