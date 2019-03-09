@@ -1,10 +1,16 @@
 package spring.test.myApp;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import spring.test.myApp.hibernate.HibernateTest;
+import spring.test.myApp.service.EmployeeService;
+
 @Controller
 public class HomeController {
+	@Autowired
+	private HibernateTest hibernateTest;
 	
 	@RequestMapping("/")
 	public String showStartPage() {
@@ -14,6 +20,12 @@ public class HomeController {
 	@RequestMapping("index")
 	public String showStartPageAgain() {
 		return "index";
+	}
+	
+	@RequestMapping("hibernateTest")
+	public String runHibernateTest() {
+		hibernateTest.testingHibernate();
+		return "testHibernateConnection";
 	}
 
 }

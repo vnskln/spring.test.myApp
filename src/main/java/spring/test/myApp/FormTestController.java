@@ -7,8 +7,10 @@ import javax.validation.Valid;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
@@ -20,6 +22,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("form")
 public class FormTestController {
 	
+	@Autowired
+	public SessionFactory sessionFactory;
+	
 	@RequestMapping("show")
 	public String showTestForm (Model model) {
 		Person person = new Person();
@@ -27,20 +32,17 @@ public class FormTestController {
 		return "testForm";
 	}
 	
+	@Transactional
 	@RequestMapping("process")
 	public String processTestForm(@Valid @ModelAttribute("person") Person person, BindingResult theBindingResult) {
 		if (theBindingResult.hasErrors()) {
 			return "testForm";
 		}
 		else {
-			SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Person.class).buildSessionFactory();
-			Session session = factory.getCurrentSession();
+			Session session = sessionFactory.getCurrentSession();
 			try {
-				session.beginTransaction();
 				session.save(person);
-				session.getTransaction().commit();
 			} finally {
-				factory.close();
 			}
 			return "testProcessForm";
 		}
@@ -56,9 +58,9 @@ public class FormTestController {
 		return "redirect:/employeeList";
 	}
 	
-	@RequestMapping("hibernateTestRoutine")
+	@RequestMapping("hibernateTest")
 	public String showHibernateTestRoutine() {
-		return "redirect:/hibernateTestRoutine";
+		return "redirect:/hibernateTest";
 	}
 	
 	@InitBinder

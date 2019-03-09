@@ -48,4 +48,17 @@ public class EmployeeController {
 		model.addAttribute("employee",theEmployee);
 		return "employeeForm";
 	}
+	
+	@GetMapping("deleteEmployee")
+	public String deleteEmployee(@RequestParam("employeeId") int employeeId, Model model) {
+		employeeService.deleteEmployee(employeeId);
+		return "redirect:/employeeList";
+	}
+	
+	@GetMapping("search")
+	public String searchForEmployee (@RequestParam("searchName") String searchName, Model model) {
+		List<Employee> employees = employeeService.searchForEmployees(searchName);
+        model.addAttribute("employees", employees);
+        return "listEmployees"; 
+	}
 }

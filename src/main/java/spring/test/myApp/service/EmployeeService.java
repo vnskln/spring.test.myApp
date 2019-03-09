@@ -30,4 +30,14 @@ public class EmployeeService {
 		return employeeDAO.getEmployee(employeeId);
 	}
 
+	@Transactional
+	public void deleteEmployee(int employeeId) {
+		employeeDAO.deleteEmployee(employeeId);
+	}
+
+	@Transactional
+	public List<Employee> searchForEmployees(String searchName) {
+		return employeeDAO.searchForEmployees(searchName);
+	}
+
 }

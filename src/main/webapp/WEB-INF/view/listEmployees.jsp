@@ -29,7 +29,7 @@
                             <a href="index" class="nav-link">Main</a>
                         </li>
                         <li class="nav-item">
-                            <a href="hibernateTestRoutine" class="nav-link">Database connection test</a>
+                            <a href="hibernateTest" class="nav-link">Database connection test</a>
                         </li>
                         <li class="nav-item">
                             <a href="form/show" class="nav-link">Form test</a>
@@ -56,8 +56,8 @@
 			<div class="container">
 				<div class="row py-2 justify-content-center">
 					<div class="col-8">
-						<form:form action="search" method="POST">
-	                	Search for employee: <input type="text" name="theSearchName" />
+						<form:form action="search" method="GET">
+	                	Search for employee: <input type="text" name="searchName" />
 	                    <input type="submit" value="Search" class="btn" />
 	            		</form:form>
 									
@@ -77,6 +77,7 @@
 							<tr>
 								<th scope="col">Surname</th>
 								<th scope="col">Name</th>
+								<th scope="col">ID</th>
 								<th scope="col">Email</th>
 								<th scope="col">City</th>
 								<th scope="col">Address</th>
@@ -88,18 +89,19 @@
 								<c:param name="employeeId" value="${tempEmployee.id}"/>
 							</c:url>
 							
-							<c:url var="deleteLink" value="/employee/delete">
+							<c:url var="deleteLink" value="/deleteEmployee">
 								<c:param name="employeeId" value="${tempEmployee.id}"/>
 							</c:url>
 							
 							<tr>
 								<td> ${tempEmployee.surname}</td>
 								<td> ${tempEmployee.name}</td>
+								<td> ${tempEmployee.id}</td>
 								<td> ${tempEmployee.email}</td>
 								<td> ${tempEmployee.city}</td>
 								<td> ${tempEmployee.address}</td>
 								<td><a href=${updateLink} data-toggle="tooltip" title="Edit"><i class="fas fa-address-card"></i></a>
-								<a href=${deleteLink} data-toggle="tooltip" title="Delete" onclick="if (!(confirm('Czy chcesz usunąć tego pracownika?'))) return false"><i class="far fa-trash-alt"></i></a></td>
+								<a href=${deleteLink} data-toggle="tooltip" title="Delete" onclick="if (!(confirm('Deleting employee. Are you sure?'))) return false"><i class="far fa-trash-alt"></i></a></td>
 							</tr>
 						</c:forEach>
 					</table>

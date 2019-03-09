@@ -41,7 +41,7 @@
 							<form:input path="postalCode" class="form-control"/>
 							<label class="mt-3">Address</label>
 							<form:input path="address" class="form-control"/>
-						  	<button type="submit" class="btn btn-primary mt-3">Save new employee</button>
+						  	<button type="submit" class="btn btn-primary mt-3">Save employee</button>
 						  	<button class="btn btn-danger mt-3" onclick="window.location.href='${pageContext.request.contextPath}/employeeList'; return false;">Go back to employee list</button>
 						</form:form>
 					</div>
