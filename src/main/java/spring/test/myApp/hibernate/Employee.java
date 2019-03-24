@@ -6,6 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name="employees")
@@ -16,24 +18,38 @@ public class Employee {
 	private int id;
 	
 	@Column(name="name")
+	@NotNull(message="required")
+	@Size(min=1, message="required")
 	private String name;
 	
 	@Column(name="surname")
+	@NotNull(message="required")
+	@Size(min=1, message="required")
 	private String surname;
 	
 	@Column(name="email")
+	@NotNull(message="required")
+	@Size(min=1, message="required")
 	private String email;
 	
 	@Column(name="phone_number")
+	@NotNull(message="required")
+	@Size(min=1, message="required")
 	private String phoneNumber;
 	
 	@Column(name="city")
+	@NotNull(message="required")
+	@Size(min=1, message="required")
 	private String city;
 	
 	@Column(name="postal_code")
+	@Size(min=1, message="required")
+	@NotNull(message="required")
 	private String postalCode;
 	
 	@Column(name="address")
+	@NotNull(message="required")
+	@Size(min=1, message="required")
 	private String address;
 
 	public Employee() {}

@@ -15,7 +15,7 @@ CREATE TABLE `people` (
   `education` varchar(50) default NULL,
   `robot_checker` boolean default NULL,
   PRIMARY KEY (`id`)
-) AUTO_INCREMENT=1;
+)
 
 DROP TABLE IF EXISTS `employees`;
 CREATE TABLE `employees` (

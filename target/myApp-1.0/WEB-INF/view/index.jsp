@@ -105,20 +105,38 @@
             <div class="container">
                 <div class="col">
                     <p class="text-center"><i class="fas fa-angle-double-left"></i> <i class="fa fa-cog mb-2"></i> <i class="fas fa-angle-double-right"></i></p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi leo augue, lacinia vel arcu sed, maximus euismod diam. Vestibulum at arcu molestie, commodo mauris at, condimentum ante. Phasellus tristique lobortis commodo. Nam pretium viverra erat, non mollis felis sagittis sed. Sed quis nisl lorem. Proin at elit convallis, fringilla quam quis, dictum diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean molestie ex quis lorem pellentesque tincidunt. Phasellus nec mauris mollis metus pellentesque placerat eu eu velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras vel libero justo. Etiam scelerisque ante non nunc cursus, ac sollicitudin nibh maximus. Vestibulum ut justo ac enim tristique mollis sed non sem. Ut ullamcorper quis mauris ac efficitur. Sed laoreet et purus eu dignissim. Etiam nibh est, mattis ultrices commodo eu, luctus eu sem.</p>
+                    <p>I'm vnskln and this is the place where i train my skills. When I see new technology (and it's worth studying) I try to incorporate it here.
+                    It has started with basic html and css, then came java+spring, hibernate for database connections, and finally heroku, to show it all to the
+                    internet.</br></br>If you are looking for a new employee you came to right place. Maybe I'm still on the beginning of my 
+                    IT journey and I have much to learn, but i work hard to achieve this goal. So maybe you can give me a try ;)</br></br>Have a nice day!</p>
                     <p class="text-center"><i class="fas fa-angle-double-left"></i> <i class="fa fa-cog mb-2"></i> <i class="fas fa-angle-double-right"></i></p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi leo augue, lacinia vel arcu sed, maximus euismod diam. Vestibulum at arcu molestie, commodo mauris at, condimentum ante. Phasellus tristique lobortis commodo. Nam pretium viverra erat, non mollis felis sagittis sed. Sed quis nisl lorem. Proin at elit convallis, fringilla quam quis, dictum diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean molestie ex quis lorem pellentesque tincidunt. Phasellus nec mauris mollis metus pellentesque placerat eu eu velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras vel libero justo. Etiam scelerisque ante non nunc cursus, ac sollicitudin nibh maximus. Vestibulum ut justo ac enim tristique mollis sed non sem. Ut ullamcorper quis mauris ac efficitur. Sed laoreet et purus eu dignissim. Etiam nibh est, mattis ultrices commodo eu, luctus eu sem.</p>
+                    <p>More about this app.</br>
+	                   	<ul>
+	                   		<li>it is created in java 8 with spring 5 framework</li>
+	                   		<li>data validation done in spring validation</li>
+	                   		<li>data is stored in mySQL database</li>
+	                   		<li>hibernate framework connects app with database</li>
+	                   		<li>maven is used for dependencies</li>
+	                   		<li>source code can be found <a href="https://github.com/vnskln/spring.test.myApp">here</a></li>
+	                   	</ul>
+                   	</p>
                     <p class="text-center"><i class="fas fa-angle-double-left"></i> <i class="fa fa-cog mb-2"></i> <i class="fas fa-angle-double-right"></i></p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi leo augue, lacinia vel arcu sed, maximus euismod diam. Vestibulum at arcu molestie, commodo mauris at, condimentum ante. Phasellus tristique lobortis commodo. Nam pretium viverra erat, non mollis felis sagittis sed. Sed quis nisl lorem. Proin at elit convallis, fringilla quam quis, dictum diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean molestie ex quis lorem pellentesque tincidunt. Phasellus nec mauris mollis metus pellentesque placerat eu eu velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras vel libero justo. Etiam scelerisque ante non nunc cursus, ac sollicitudin nibh maximus. Vestibulum ut justo ac enim tristique mollis sed non sem. Ut ullamcorper quis mauris ac efficitur. Sed laoreet et purus eu dignissim. Etiam nibh est, mattis ultrices commodo eu, luctus eu sem.</p>
+                    <p>Implemented functions:
+                    	<ul>
+                    		<li>database connection test (first steps in hibernate) - crud operations performed on "people" table in myApp database</li>
+                    		<li>user form with custom validation rules</li>
+                    		<li>employee list with crud features (add, update, delete), validation and search option</li>
+                    	</ul>
+                    </p>
                 </div>
             </div>
         </section>
       
-		<footer id="main-footer" class="text-center pt-3">
+		<footer class="text-center pt-3">
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <p>Copyright 2018 &copy;vnskln</p>
+                        <p>&copy;vnskln 2019 vnskln.dev@gmail.com</p>
                     </div>
                 </div>
             </div>

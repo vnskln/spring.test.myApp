@@ -11,8 +11,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import spring.test.myApp.Person;
-
 @Repository
 public class HibernateTest {
 	

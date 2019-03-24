@@ -2,18 +2,22 @@ package spring.test.myApp;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
+import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import spring.test.myApp.Person;
 import spring.test.myApp.hibernate.Employee;
 import spring.test.myApp.hibernate.EmployeeDAO;
+import spring.test.myApp.hibernate.Person;
 import spring.test.myApp.service.EmployeeService;
 
 @Controller
@@ -25,7 +29,9 @@ public class EmployeeController {
 	@GetMapping("employeeList")
 	public String showEmployeeList(Model theModel) {
 		List<Employee> employees = employeeService.getEmployeeList();
+		int numberOfEmployees = employees.size();
 		theModel.addAttribute("employees", employees);
+		theModel.addAttribute("numberOfEmployees", numberOfEmployees);
 		return "listEmployees";
 	}
 	
@@ -36,10 +42,18 @@ public class EmployeeController {
 		return "employeeForm";
 	}
 	
-	@PostMapping("saveEmployee")
-	public String saveEmployee (@ModelAttribute("employee") Employee theEmployee) {
-		employeeService.saveEmployee(theEmployee);
-		return "redirect:/employeeList";
+	@RequestMapping("saveEmployee")
+	public String saveEmployee (@Valid @ModelAttribute("employee") Employee theEmployee, BindingResult theBindingResult) {
+		if (theBindingResult.hasErrors()) {
+			return "employeeForm";
+		}
+		else {
+			try {
+				employeeService.saveEmployee(theEmployee);
+			} finally {
+			}
+			return "redirect:/employeeList";
+		}
 	}
 	
 	@GetMapping("showEmployeeUpdateForm")

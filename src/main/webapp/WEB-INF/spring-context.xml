@@ -35,12 +35,18 @@
 	<bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
           destroy-method="close">
         <property name="driverClass" value="com.mysql.cj.jdbc.Driver" />
-        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/myappdb?useSSL=false&amp;serverTimezone=UTC"/>
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/myappdb?useSSL=false&amp;serverTimezone=UTC&amp;autoReconnect=true"/>
         <property name="user" value="vnskln" />
         <property name="password" value="vnskln" />
+        <property name="checkoutTimeout" value="0"/>
+		<property name="testConnectionOnCheckout" value="true"/>
+		<property name="testConnectionOnCheckin" value="false"/>
+		<property name="preferredTestQuery" value="SELECT 1 from dual"/>
         <property name="minPoolSize" value="5" />
         <property name="maxPoolSize" value="20" />
         <property name="maxIdleTime" value="30000" />
+        <property name="maxStatements" value="50" />
+        <property name="idleConnectionTestPeriod" value="300" />
 	</bean>
 
 

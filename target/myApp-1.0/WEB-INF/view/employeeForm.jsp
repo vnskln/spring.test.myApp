@@ -23,25 +23,32 @@
 		</section>
 		<section>
 			<div class="d-flex justify-content-center">
-				<div class="col-4">
+				<div class="col-6">
 					<div class="form-group">
 						<form:form action="saveEmployee" modelAttribute="employee" method="POST">
 					    	<form:hidden path="id"/>
 					    	<label class="mt-3">Name</label>
+					    	<form:errors path="name" cssClass="error"/>
 							<form:input path="name" class="form-control"/>
 							<label class="mt-3">Surname</label>
+							<form:errors path="surname" cssClass="error"/>
 							<form:input path="surname" class="form-control"/>
 							<label class="mt-3">Email</label>
+							<form:errors path="email" cssClass="error"/>
 							<form:input path="email" class="form-control"/>
 							<label class="mt-3">Phone number</label>
+							<form:errors path="phoneNumber" cssClass="error"/>
 							<form:input path="phoneNumber" class="form-control"/>
 							<label class="mt-3">City</label>
+							<form:errors path="city" cssClass="error"/>
 							<form:input path="city" class="form-control"/>
 							<label class="mt-3">Postal code</label>
+							<form:errors path="postalCode" cssClass="error"/>
 							<form:input path="postalCode" class="form-control"/>
 							<label class="mt-3">Address</label>
+							<form:errors path="address" cssClass="error"/>
 							<form:input path="address" class="form-control"/>
-						  	<button type="submit" class="btn btn-primary mt-3">Save new employee</button>
+						  	<button type="submit" class="btn btn-primary mt-3">Save employee</button>
 						  	<button class="btn btn-danger mt-3" onclick="window.location.href='${pageContext.request.contextPath}/employeeList'; return false;">Go back to employee list</button>
 						</form:form>
 					</div>

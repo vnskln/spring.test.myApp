@@ -38,7 +38,7 @@
                 </div>
             </div>
         </nav>
-		<header class="main-header py-1">
+		<div class="main-header py-1">
             <section id="tytul" class="pt-5 pb-3">
                 <div class="container">
                     <div class="row">
@@ -58,6 +58,15 @@
                     </div>
                 </div>
             </section>
-        </header>
+        </div>
+        <footer class="fixed-bottom text-center pt-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <p>&copy;vnskln 2019 vnskln.dev@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
 	</body>
 </html>

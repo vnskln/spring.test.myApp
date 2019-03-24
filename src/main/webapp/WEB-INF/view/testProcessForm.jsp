@@ -74,5 +74,14 @@
 				</div>
 			</div>
         </section>
+        <footer class="fixed-bottom text-center pt-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <p>&copy;vnskln 2019 vnskln.dev@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
 	</body>
 </html>
