@@ -1,4 +1,4 @@
-package spring.test.myApp;
+package spring.test.myApp.controller;
 
 import java.util.List;
 

@@ -34,11 +34,4 @@
 		<nature>org.eclipse.wst.common.project.facet.core.nature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>src/main/java/spring/test/myApp/HomeController.java</name>
-			<type>1</type>
-			<location>D:/Informatyka 2016 INŻ/Poza uczelnią/spring/myApp/src/main/java/spring/test/myApp/HomeController.java</location>
-		</link>
-	</linkedResources>
 </projectDescription>
