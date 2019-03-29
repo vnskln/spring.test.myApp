@@ -72,6 +72,10 @@
 						</div>
 					</div>
 				</div>
+				<div class="row justify-content-center pt-3">
+						<input type="button" value="Go back"
+							onclick="window.location.href='show'; return false;" class="btn"/>
+				</div>
 			</div>
         </section>
         <footer class="fixed-bottom text-center pt-3">

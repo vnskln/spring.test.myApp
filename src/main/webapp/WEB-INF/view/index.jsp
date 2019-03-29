@@ -112,11 +112,14 @@
                     <p class="text-center"><i class="fas fa-angle-double-left"></i> <i class="fa fa-cog mb-2"></i> <i class="fas fa-angle-double-right"></i></p>
                     <p>More about this app.</br>
 	                   	<ul>
+	                   		<li>a test site i use to learn new programming skills</li>
 	                   		<li>it is created in java 8 with spring 5 framework</li>
+	                   		<li>mvc architectural pattern</li>
 	                   		<li>data validation done in spring validation</li>
 	                   		<li>data is stored in mySQL database</li>
 	                   		<li>hibernate framework connects app with database</li>
 	                   		<li>maven is used for dependencies</li>
+	                   		<li>app is deployed using heroku dyno</li>
 	                   		<li>source code can be found <a href="https://github.com/vnskln/spring.test.myApp">here</a></li>
 	                   	</ul>
                    	</p>
