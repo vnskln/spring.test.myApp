@@ -21,5 +21,5 @@ Implemented functions:
 
 Plans for future:
 - Spring security with many users, different views based on user, passwords stored in database
-- more complicated database for employee list (using many tables, one-to-many, many-to-many mappings, using sql join command)
+- more complicated database for employee list (using many tables, one-to-many and many-to-many mappings, sql join command)
 - adding REST API
