@@ -8,7 +8,7 @@ What is it?
 - MVC architectural pattern
 - mySQL database
 - hibernate framework (object-relational mapping, sql queries, data access objects)
-- views done with html+css+bootstrap from scratch
+- views done with html, css and bootstrap
 - maven for dependencies
 
 Effects can be checked on heroku: http://vnskln-myapp-v1.herokuapp.com/ 
