@@ -2,7 +2,7 @@
 
 What is it?
 - java web application
-- place where I implement things I'c currently learning
+- place where I implement things I'm currently learning
 - Java 8
 - Spring framework (xml configuration, annotations, autowiring, data validation, aop aspects) 
 - MVC architectural pattern
