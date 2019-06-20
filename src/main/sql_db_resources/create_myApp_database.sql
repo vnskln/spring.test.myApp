@@ -55,3 +55,12 @@ VALUES
 ("Deirdre","Mcgowan","turpis.nec.mauris@aliquamadipiscing.co.uk","(01378) 24094","Tobermory","56549","5545 Curae; Road"),
 ("Rhea","Petty","malesuada@tinciduntDonec.co.uk","07770 248629","Nakusp","04774-996","P.O. Box 845, 2840 Ornare, Ave"),
 ("Susan","Goodwin","nunc.est.mollis@est.co.uk","0500 104402","Minneapolis","47692","7120 Volutpat. St.");
+
+DROP TABLE IF EXISTS `myapplogs`;
+CREATE TABLE `myapplogs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `logDate` timestamp NOT NULL,
+  `logMessage` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4

@@ -16,7 +16,7 @@ public class PersonDAO {
 	
 	public List<Person> getPeople () {
 		Session session = sessionFactory.getCurrentSession();
-		Query query = session.createQuery("from Person", Person.class);
+		Query <Person> query = session.createQuery("from Person", Person.class);
 		List<Person> people = query.getResultList();
 		return people; 
 	}

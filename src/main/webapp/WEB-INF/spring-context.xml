@@ -54,7 +54,6 @@
         <property name="idleConnectionTestPeriod" value="300" />
 	</bean>
 
-
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
 		<property name="dataSource" ref="myDataSource" />

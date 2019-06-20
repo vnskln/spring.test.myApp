@@ -112,11 +112,15 @@
                     <p class="text-center"><i class="fas fa-angle-double-left"></i> <i class="fa fa-cog mb-2"></i> <i class="fas fa-angle-double-right"></i></p>
                     <p>More about this app.</br>
 	                   	<ul>
-	                   		<li>it is created in java 8 with spring 5 framework</li>
-	                   		<li>data validation done in spring validation</li>
-	                   		<li>data is stored in mySQL database</li>
-	                   		<li>hibernate framework connects app with database</li>
-	                   		<li>maven is used for dependencies</li>
+	                   		<li>a test site i use to learn new programming skills</li>
+	                   		<li>it is created in <b>java 8</b> with <b>spring 5</b> framework</li>
+	                   		<li><b>mvc</b> architectural pattern</li>
+	                   		<li>data validation done in <b>spring validation</b></li>
+	                   		<li>data is stored in <b>mySQL</b> database</li>
+	                   		<li><b>hibernate</b> framework connects app with database (@Entity and @Repository used)</li>
+	                   		<li><b>maven</b> is used for dependencies</li>
+	                   		<li>aop logging made with <b>aspectJ</b> (@Before and @AfterReturning advices used)</li>
+	                   		<li>app is deployed using <b>heroku</b> dyno</li>
 	                   		<li>source code can be found <a href="https://github.com/vnskln/spring.test.myApp">here</a></li>
 	                   	</ul>
                    	</p>

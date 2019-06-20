@@ -43,7 +43,7 @@
                 <div class="container">
                     <div class="row ">
                         <div class="col pt-5">
-                            <h1 class="display-4 text-center">Simple test form</h1>
+                            <h1 class="display-4 text-center">Test form</h1>
                             <p class="text-center">validation using Hibernate Validator
                             <br>valid data is saved in database</p>
                         </div>
@@ -83,6 +83,38 @@
 				</div>
 			</div>
         </section>
+        <section>
+        	<div class="container">
+				<div class="col">
+					</br></br></br>
+					<h3 class="text-center display-4">Actual database table content:</h3>
+					<p class="text-center">Use database connection test to clear</p>
+					<table class="table table-striped text-center">
+						<thead class="thead-dark">
+							<tr>
+								<th scope="col">Surname</th>
+								<th scope="col">Name</th>
+								<th scope="col">age</th>
+								<th scope="col">height</th>
+								<th scope="col">education</th>
+								<th scope="col">is a robot?</th>
+							</tr>
+						</thead>
+						<c:forEach var="tempPerson" items="${people}">							
+							<tr>
+								<td> ${tempPerson.surname}</td>
+								<td> ${tempPerson.name}</td>
+								<td> ${tempPerson.age}</td>
+								<td> ${tempPerson.height}</td>
+								<td> ${tempPerson.education}</td>
+								<td> ${tempPerson.robotChecker}</td>
+							</tr>
+						</c:forEach>
+					</table>
+				</div>
+			</div>
+		</section>
+		</br></br></br>
 		<footer class="fixed-bottom text-center pt-3">
             <div class="container">
                 <div class="row">
