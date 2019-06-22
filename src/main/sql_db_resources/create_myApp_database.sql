@@ -75,8 +75,9 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` 
 VALUES 
-('test','{bcrypt}$2a$12$EQzz3vF7uHWliz4M6gKPYeVmzSaXjooAqGOk.jqUy9S31mSJD1D1i',1),
-('admin','{bcrypt}$2a$12$T3ZIxYLIP/t8FG4e63bsUuLRy6D37Yt7FgjmxcgnRa7WyLubdcNhS',1);
+
+('test','{bcrypt}$2a$12$T3ZIxYLIP/t8FG4e63bsUuLRy6D37Yt7FgjmxcgnRa7WyLubdcNhS',1),
+('admin','{bcrypt}$2a$12$EQzz3vF7uHWliz4M6gKPYeVmzSaXjooAqGOk.jqUy9S31mSJD1D1i',1);
 
 DROP TABLE IF EXISTS `authorities`;
 CREATE TABLE `authorities` (

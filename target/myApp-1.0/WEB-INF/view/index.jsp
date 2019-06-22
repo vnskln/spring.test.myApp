@@ -42,9 +42,11 @@
                         <li class="nav-item">
                             <a href="employeeList" class="nav-link">Employee List</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="logsList" class="nav-link">Logs</a>
-                        </li>
+                        <security:authorize access="hasRole('admin')">
+	                        <li class="nav-item">
+	                            <a href="logsList" class="nav-link">Logs</a>
+	                        </li>
+                        </security:authorize>
                         <li class="nav-item">
                             <form:form action="${pageContext.request.contextPath}/logout" method="POST">
                             	<input type="submit" value="LOGOUT" class="btn-sm btn-outline-secondary active text-white">
@@ -131,6 +133,8 @@
 	                   		<li><b>hibernate</b> framework connects app with database (@Entity and @Repository used)</li>
 	                   		<li><b>maven</b> is used for dependencies</li>
 	                   		<li>aop logging made with <b>aspectJ</b> (@Before and @AfterReturning advices used)</li>
+	                   		<li><b>spring security</b> used for authorization and role based content</li>
+	                   		<li>passwords encrypted with bcrypt and stored in database</li>
 	                   		<li>app is deployed using <b>heroku</b> dyno</li>
 	                   		<li>source code can be found <a href="https://github.com/vnskln/spring.test.myApp">here</a></li>
 	                   	</ul>
@@ -141,6 +145,9 @@
                     		<li>database connection test (first steps in hibernate) - crud operations performed on "people" table in myApp database</li>
                     		<li>user form with custom validation rules</li>
                     		<li>employee list with crud features (add, update, delete), validation and search option</li>
+                    		<li>logs (timestamp of main page request)</li>
+                    		<li>login/password authorization</li>
+                    		<li>content based on user role (only admin can see logs)</li>
                     	</ul>
                     </p>
                 </div>
