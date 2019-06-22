@@ -40,9 +40,11 @@
                         <li class="nav-item">
                             <a href="employeeList" class="nav-link">Employee List</a>
                         </li>
-                        <li class="nav-item active">
-                            <a href="" class="nav-link active">Logs</a>
-                        </li>
+                        <security:authorize access="hasRole('admin')">
+	                        <li class="nav-item active">
+	                            <a href="" class="nav-link">Logs</a>
+	                        </li>
+                        </security:authorize>
                         <li class="nav-item">
                             <form:form action="${pageContext.request.contextPath}/logout" method="POST">
                             	<input type="submit" value="LOGOUT" class="btn-sm btn-outline-secondary active text-white">

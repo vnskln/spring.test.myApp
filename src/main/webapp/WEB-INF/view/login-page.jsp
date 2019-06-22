@@ -22,7 +22,7 @@
 					<div class="panel-title text-center">
 						<h1><img src="<%=request.getContextPath() %>/resources/img/logoW.jpeg" id="nav-logo"> myApp</h1>
 						<br><p class="text-muted small">Test accounts:</p>
-						<p class="text-muted small">- guest test / test</p>
+						<p class="text-muted small">- user test / test</p>
 						<p class="text-muted small">- root admin / admin</p>
 					</div>
 				</div>

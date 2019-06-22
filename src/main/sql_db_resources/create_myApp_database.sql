@@ -64,3 +64,30 @@ CREATE TABLE `myapplogs` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE `users` (
+  `username` varchar(50) NOT NULL,
+  `password` varchar(70) NOT NULL,
+  `enabled` tinyint(1) NOT NULL,
+  PRIMARY KEY (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `users` 
+VALUES 
+('test','{bcrypt}$2a$12$EQzz3vF7uHWliz4M6gKPYeVmzSaXjooAqGOk.jqUy9S31mSJD1D1i',1),
+('admin','{bcrypt}$2a$12$T3ZIxYLIP/t8FG4e63bsUuLRy6D37Yt7FgjmxcgnRa7WyLubdcNhS',1);
+
+DROP TABLE IF EXISTS `authorities`;
+CREATE TABLE `authorities` (
+  `username` varchar(50) NOT NULL,
+  `authority` varchar(50) NOT NULL,
+  UNIQUE KEY `authorities_idx_1` (`username`,`authority`),
+  CONSTRAINT `authorities_ibfk_1` FOREIGN KEY (`username`) REFERENCES `users` (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `authorities` 
+VALUES 
+('test','ROLE_user'),
+('admin','ROLE_user'),
+('admin','ROLE_admin');

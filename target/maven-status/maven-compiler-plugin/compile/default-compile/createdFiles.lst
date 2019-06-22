@@ -5,6 +5,7 @@ spring\test\myApp\validationRules\NameChecker.class
 spring\test\myApp\hibernate\LogMessageDAO.class
 spring\test\myApp\hibernate\Employee.class
 spring\test\myApp\hibernate\LogMessage.class
+spring\test\myApp\controller\LoginController.class
 spring\test\myApp\hibernate\PersonDAO.class
 spring\test\myApp\service\PersonService.class
 spring\test\myApp\controller\FormTestController.class

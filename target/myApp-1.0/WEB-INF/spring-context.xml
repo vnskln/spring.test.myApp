@@ -37,7 +37,7 @@
 		<property name="defaultEncoding" value="UTF-8"/>
 	</bean>
 	
-		<bean class="java.net.URI" id="dbUrl">
+	<bean class="java.net.URI" id="dbUrl">
 	  	<constructor-arg value="#{systemEnvironment['CLEARDB_DATABASE_URL']}"/>
 	</bean>
 	<bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
@@ -56,9 +56,6 @@
         <property name="maxStatements" value="50" />
         <property name="idleConnectionTestPeriod" value="300" />
 	</bean>
-
-
-
 
 
 	<bean id="sessionFactory"

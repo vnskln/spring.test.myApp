@@ -2,6 +2,8 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -17,6 +19,8 @@
             <div class="container">
                 <a href="index" class="navbar-brand">
                     <img src="<%=request.getContextPath() %>/resources/img/logoW.jpeg" id="nav-logo"> myApp</a>
+                <div class="nav-link text-white font-weight-light">User: <security:authentication property="principal.username"/>
+         		<br>Role: <security:authentication property="principal.authorities"/></div>
                 <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -34,6 +38,14 @@
                         <li class="nav-item">
                             <a href="employeeList" class="nav-link">Employee List</a>
                         </li>
+                        <li class="nav-item">
+                            <a href="logsList" class="nav-link">Logs</a>
+                        </li>
+                        <li class="nav-item">
+                            <form:form action="${pageContext.request.contextPath}/logout" method="POST">
+                            	<input type="submit" value="LOGOUT" class="btn-sm btn-outline-secondary active text-white">
+                            </form:form>
+                        </li>                        
                      </ul>
                 </div>
             </div>
