@@ -134,7 +134,7 @@
 	                   		<li><b>maven</b> is used for dependencies</li>
 	                   		<li>aop logging made with <b>aspectJ</b> (@Before and @AfterReturning advices used)</li>
 	                   		<li><b>spring security</b> used for authorization and role based content</li>
-	                   		<li>passwords encrypted with bcrypt and stored in db</li>
+	                   		<li>passwords encrypted with bcrypt and stored in database</li>
 	                   		<li>app is deployed using <b>heroku</b> dyno</li>
 	                   		<li>source code can be found <a href="https://github.com/vnskln/spring.test.myApp">here</a></li>
 	                   	</ul>
