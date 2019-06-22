@@ -11,7 +11,7 @@ What is it?
 - views done with html, css and bootstrap
 - maven for dependencies
 
-Effects can be checked on heroku: http://vnskln-myapp-v2.herokuapp.com/ 
+Effects can be checked on heroku: http://vnskln-myapp-v1.herokuapp.com/ 
 
 Implemented functions:
 - database connection test (first steps in hibernate) - crud operations performed on "people" table in myApp database
