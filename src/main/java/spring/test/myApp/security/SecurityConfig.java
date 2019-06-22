@@ -2,6 +2,7 @@ package spring.test.myApp.security;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.User;
@@ -15,9 +16,21 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 
 		UserBuilder users = User.withDefaultPasswordEncoder();
-		auth.inMemoryAuthentication().withUser(users.username("Tom").password("test").roles("Role 1"));
-		auth.inMemoryAuthentication().withUser(users.username("John").password("testtest").roles("Role 2"));
-		auth.inMemoryAuthentication().withUser(users.username("Barbara").password("testtesttest").roles("Role 3"));
+		auth.inMemoryAuthentication().withUser(users.username("test").password("test").roles("guest"));
+		auth.inMemoryAuthentication().withUser(users.username("admin").password("admin").roles("admin"));
+	}
+
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+	    String[] staticResources  =  {
+	            "/resources/img/**",
+	            "/resources/css/**"
+	        };
+		
+		http.authorizeRequests().antMatchers(staticResources).permitAll().
+		anyRequest().authenticated().and()
+		.formLogin().loginPage("/showLoginPage")
+		.loginProcessingUrl("/authenticateUser").permitAll().and().logout().permitAll();
 	}
 
 	

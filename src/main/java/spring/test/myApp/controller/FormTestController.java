@@ -69,6 +69,11 @@ public class FormTestController {
 		return "redirect:/hibernateTest";
 	}
 	
+	@RequestMapping("logsList")
+	public String goBackToLogsList() {
+		return "redirect:/logsList";
+	}
+	
 	@InitBinder
 	public void initBinder (WebDataBinder webDataBinder) {
 		StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true);
